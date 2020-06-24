@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@media M3</title>
+    <style>
+        .header {
+            max-width: 100%;
+            height: 200px;
+            background: #AFD5FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .feature {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 400px;
+        }
+
+        .yellow {
+            background: #F9CE8C;
+        }
+
+        .blue {
+            background: #C8C9FC;
+        }
+
+        .red {
+            background: #F8A39A;
+        }
+
+        .sign-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 150px;
+            background: #D3E8FF;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 500px;
+            background: #EAEDF0;
+        }
+
+        .list-feature {
+            display: flex;       
+        }
+
+        .list-featuremob,
+        .content-mobile {
+            display: none;
+        }
+
+        @media screen and (max-width: 1024px) {
+
+            .desck,
+            .list-feature,
+            .sign-up {
+                display: none;
+            }
+            .content-mobile {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 300px;
+                background: #EAEDF0;
+            }
+
+            .list-featuremob {
+                display: flex;
+            }
+
+            .sign-up-mobile {
+                background: #D4E8FF;
+            }
+
+            .feature-mobile,
+            .sign-up-mobile {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 200px;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            .list-featuremob {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <h2>(HEADER)</h2>
+    </div>
+    <div class="content-mobile">
+        <h2>(CONTENT)</h2>
+    </div>
+
+    <!-- 2 quadros ipad-->
+    <div class="list-featuremob">
+        <div class="sign-up-mobile">
+            <h2>(SIGN UP)</h2>
+        </div>
+        <div class="feature-mobile yellow ">
+            <h2>(FEATURE)</h2>
+        </div>
+    </div>
+    <!-- 2 quadros ipad-->
+    <div class="list-featuremob">
+        <div class="feature-mobile red ">
+            <h2>(FEATURE)</h2>
+        </div>
+        <div class="feature-mobile blue ">
+            <h2>(FEATURE)</h2>
+        </div>
+    </div>
+    <!-- Descktop-->
+    <div class="desck">
+        <div class="list-feature">
+            <div class="feature yellow">
+                <h2>(FEATURE)</h2>
+            </div>
+            <div class="feature blue">
+                <h2>(FEATURE)</h2>
+            </div>
+            <div class="feature red">
+                <h2>(FEATURE)</h2>
+            </div>
+        </div>
+        <div class="sign-up">
+            <h2>(SIGN UP)</h2>
+        </div>
+        <div class="content">
+            <h2>(CONTENT)</h2>
+        </div>
+    </div>
+</body>
+
+</html>
